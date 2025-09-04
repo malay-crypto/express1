@@ -5,7 +5,7 @@ let fetchProducts=createAsyncThunk('prod',
     async (req,res)=>{
 
 
-           let r=await axios.get("/")
+           let r=await axios.get("https://express1-web-service.onrender.com/")
         return  r.data
 
     })

@@ -36,7 +36,7 @@ let Search=()=>{
             }
 
 
-            let r=await axios.get("/search",{params:queryObj})
+            let r=await axios.get("https://express1-web-service.onrender.com/search",{params:queryObj})
             dispatch(setSearchedRecords(r.data))
 
 

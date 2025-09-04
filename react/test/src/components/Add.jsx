@@ -16,7 +16,7 @@ let [obj,setObj]=useState({name:'',category:'',price:''});
 
     let addClick=async ()=>{
 
-       await axios.post('/add',obj)
+       await axios.post('https://express1-web-service.onrender.com/add',obj)
         toast.success('record added successfully')
     }
 

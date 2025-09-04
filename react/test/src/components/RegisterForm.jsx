@@ -12,7 +12,7 @@ let RegisterForm=()=>{
 
     let registerClick=async ()=>{
 
-        await axios.post("/register",obj)
+        await axios.post("https://express1-web-service.onrender.com/register",obj)
         toast.success("registration successful")
 
     }
