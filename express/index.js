@@ -19,7 +19,7 @@ const sch2 = new mongoose.Schema(
 const Product = mongoose.model('xxxx', sch,'Product');
 const User = mongoose.model('yy', sch2,'User');
 
-mongoose.connect("mongodb://localhost:27017/ecommerce3");
+mongoose.connect("mongodb+srv://malay:malay12345@cluster0.oqbhjju.mongodb.net/ecommerce3?retryWrites=true&w=majority&appName=Cluster0");
 
 app.get("/", async (req, res) => {
 

@@ -23,7 +23,7 @@ let LoginForm=()=>{
 
     let loginClick=async ()=>{
 
-           let r= await axios.post("http://localhost:3000/login",obj)
+           let r= await axios.post("/login",obj)
         console.log(r)
         toast.success("Login successful")
 

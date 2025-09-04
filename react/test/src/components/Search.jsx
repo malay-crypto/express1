@@ -36,7 +36,7 @@ let Search=()=>{
             }
 
 
-            let r=await axios.get("http://localhost:3000/search",{params:queryObj})
+            let r=await axios.get("/search",{params:queryObj})
             dispatch(setSearchedRecords(r.data))
 
 

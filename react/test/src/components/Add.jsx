@@ -16,7 +16,7 @@ let [obj,setObj]=useState({name:'',category:'',price:''});
 
     let addClick=async ()=>{
 
-       await axios.post('http://localhost:3000/add',obj)
+       await axios.post('/add',obj)
         toast.success('record added successfully')
     }
 

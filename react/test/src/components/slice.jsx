@@ -5,7 +5,7 @@ let fetchProducts=createAsyncThunk('prod',
     async (req,res)=>{
 
 
-           let r=await axios.get("http://localhost:3000/")
+           let r=await axios.get("/")
         return  r.data
 
     })

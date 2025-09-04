@@ -12,7 +12,7 @@ let RegisterForm=()=>{
 
     let registerClick=async ()=>{
 
-        await axios.post("http://localhost:3000/register",obj)
+        await axios.post("/register",obj)
         toast.success("registration successful")
 
     }
