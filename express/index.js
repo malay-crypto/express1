@@ -19,14 +19,12 @@ const sch2 = new mongoose.Schema(
 const Product = mongoose.model('xxxx', sch,'Product');
 const User = mongoose.model('yy', sch2,'User');
 
-mongoose.connect("mongodb+srv://malay:malay12345@cluster0.oqbhjju.mongodb.net/ecommerce3?retryWrites=true&w=majority&appName=Cluster0"
+mongoose.connect("mongodb://malay:malay12345@cluster0-shard-00-00.oqbhjju.mongodb.net:27017,cluster0-shard-00-01.oqbhjju.mongodb.net:27017,cluster0-shard-00-02.oqbhjju.mongodb.net:27017/ecommerce3?ssl=true&replicaSet=atlas-unzaer-shard-0&authSource=admin&retryWrites=true&w=majority"
 ,
     {
         serverSelectionTimeoutMS: 5000,   // quick fail if cannot connect
         socketTimeoutMS: 45000,           // keep sockets open
-        ssl: true,
-        tlsAllowInvalidCertificates: false,
-        tlsAllowInvalidHostnames: false,
+
         minPoolSize: 1,
         maxPoolSize: 10,
     }
