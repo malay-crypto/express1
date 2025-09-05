@@ -40,7 +40,7 @@ function App() {
                                   <Route path={'/add'} element={  <Add/>}/>
                                   <Route path={'/login'} element={   <LoginForm/>}/>
                                     <Route path={'/logout'} element={   <Logout/>}/>
-                                  <Route path={'/add'} element={  <RegisterForm/>}/>
+                                  <Route path={'/register'} element={  <RegisterForm/>}/>
 
 
                                 </Routes>

@@ -4,7 +4,7 @@ import axios from "axios";
 import {toast} from "react-toastify";
 import {useDispatch, useSelector} from "react-redux";
 import {setToken} from "./slice.jsx";
-import {useLocation, useNavigate} from "react-router-dom";
+import {useLocation, useNavigate,Link} from "react-router-dom";
 
 let LoginForm=()=>{
 
@@ -64,7 +64,7 @@ let LoginForm=()=>{
 
 
                     <Button variant="primary" onClick={loginClick}>Login</Button>
-
+                    <Link to={'/register'}>New user? Register here</Link>
 
                 </Card.Body>
             </Card>
