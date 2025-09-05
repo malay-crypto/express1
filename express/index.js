@@ -19,7 +19,18 @@ const sch2 = new mongoose.Schema(
 const Product = mongoose.model('xxxx', sch,'Product');
 const User = mongoose.model('yy', sch2,'User');
 
-mongoose.connect("mongodb+srv://malay:malay12345@cluster0.oqbhjju.mongodb.net/ecommerce3?retryWrites=true&w=majority&appName=Cluster0");
+mongoose.connect("mongodb+srv://malay:malay12345@cluster0.oqbhjju.mongodb.net/ecommerce3?retryWrites=true&w=majority&appName=Cluster0"
+,
+    {
+        serverSelectionTimeoutMS: 5000,   // quick fail if cannot connect
+        socketTimeoutMS: 45000,           // keep sockets open
+        ssl: true,
+        tlsAllowInvalidCertificates: false,
+        tlsAllowInvalidHostnames: false,
+        minPoolSize: 1,
+        maxPoolSize: 10,
+    }
+);
 
 app.get("/", async (req, res) => {
 
