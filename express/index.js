@@ -22,15 +22,10 @@ const User = mongoose.model('yy', sch2,'User');
 mongoose.connect("mongodb+srv://malay:malay12345@cluster0.oqbhjju.mongodb.net/ecommerce3?retryWrites=true&w=majority&appName=Cluster0"
 ,
     {
-        serverSelectionTimeoutMS: 5000,
-        socketTimeoutMS: 45000,
+
         ssl: true,
-        tlsInsecure: false,
-        tlsAllowInvalidCertificates: false,
-        tlsAllowInvalidHostnames: false,
-        minPoolSize: 1,
-        maxPoolSize: 10,
-        compressors: ["zlib"],   // helps handshake
+
+              
         family: 4
     }
 );
