@@ -23,12 +23,7 @@ mongoose.connect("mongodb+srv://malay:malay12345@cluster0.oqbhjju.mongodb.net/ec
 ,
     {
         serverSelectionTimeoutMS: 5000,   // quick fail if cannot connect
-        socketTimeoutMS: 45000,           // keep sockets open
-        ssl: true,
-        family: 4,
-        tlsAllowInvalidHostnames: false,
-        minPoolSize: 1,
-        maxPoolSize: 10
+
     }
 );
 
