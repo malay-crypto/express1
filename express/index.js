@@ -22,10 +22,11 @@ const User = mongoose.model('yy', sch2,'User');
 mongoose.connect("mongodb+srv://malay:malay12345@cluster0.oqbhjju.mongodb.net/ecommerce3?retryWrites=true&w=majority&appName=Cluster0"
 ,
     {
-
+        serverSelectionTimeoutMS: 5000,   // quick fail if cannot connect
+        socketTimeoutMS: 45000,           // keep sockets open
         ssl: true,
 
-              
+
         family: 4
     }
 );
